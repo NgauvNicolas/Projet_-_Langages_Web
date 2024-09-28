@@ -1,0 +1,509 @@
+body {
+	background-image: url("../images/laruku_uchuu6.jpg");
+	background-attachment: fixed;
+    color: #FDF1B8;
+	text-align: justify;
+}
+
+
+
+
+
+.color1 {
+	color: #43bc82;
+}
+
+.color2 {
+	color: #ff9900;
+}
+
+.color3 {
+	color: #43bc82;
+}
+
+.color4 {
+	color: #ff9900;
+}
+
+.italique {
+	font-style: italic;
+}
+
+.gras {
+	font-weight: bold;
+}
+
+.ui-helper-hidden-accessible { 
+	display:none; 
+}
+
+.verte {
+	color: green;
+}
+
+.vi {
+	color: violet;
+}
+
+.carousel {
+
+    width: 60%; /* Largeur souhaitée */
+    height: 40%; /* Hauteur souhaitée */
+
+  }
+
+.carousel .carousel-item {
+	background-position: center;
+}
+
+.carousel-inner img {
+	margin: auto;
+}
+
+.carousel .carousel-item img {
+  max-width: 80%; /* Assure que l'image ne dépasse pas la largeur de la diapositive */
+  height: auto; /* Maintient les proportions de l'image */
+  border-radius: 8px; /* Coins arrondis pour les images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée sur les images */
+  /*padding-right: 7%;*/
+}
+
+
+/* Styles pour rendre les boutons de contrôle invisibles */
+.carousel .carousel-control-prev,
+.carousel .carousel-control-next {
+  visibility: hidden; /* Rend les boutons invisibles */
+  pointer-events: none; /* Les rend non cliquables */
+}
+
+/* Effet de survol (rendre les boutons visibles) */
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+  visibility: visible; /* Rend les boutons visibles au survol du carousel */
+  pointer-events: auto; /* Les rend cliquables au survol */
+}
+
+
+/*
+}
+.carousel-inner{
+  width:50%;
+  height: 50% !important;
+}
+.carousel-item img {
+  width: 25%; /* ou toute autre taille souhaitée */
+  /*
+  height: auto; /* Cela garantit que l'image conserve ses proportions d'origine */
+ }
+ /*
+.carousel-inner img {
+	margin: auto;
+}
+.carousel-item {
+	background-position: center;
+}
+
+
+/* Style du menu horizontal */
+/*
+.navbar-nav {
+	margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+*/
+
+
+.navbar {
+    background-color: var(--logo-black);
+}
+
+
+
+.hero.is-primary {
+    background-color: var(--logo-blue);
+    color: var(--logo-white);
+}
+
+.navbar-item{
+    color: white;
+}
+
+.navbar-nav .dropdown-menu {
+	background-color: limegreen;
+}
+
+.navbar-nav .nav-item.active,
+.navbar-nav .nav-item:hover,
+.navbar-nav .nav-item:focus,
+.navbar-nav .nav-link.active,
+.navbar-nav .dropdown-item.active
+ {
+	background-color: blueviolet;
+	color: yellow;
+}
+
+a.navbar-item:hover {
+    background-color: white;
+    color: #514e4f;
+}
+
+.navbar-link:hover {
+    background-color: white;
+    color: #514e4f;
+}
+
+
+.nav-link{
+    color:#d8d5d6;
+}
+
+a.nav-link.menu {
+    font-size: 16px;
+}
+
+
+
+
+
+/* Adjust button colors */
+.button {
+    background-color: var(--logo-blue);
+    color: var(--logo-white);
+    &:hover {
+        background-color: var(--logo-black);
+        color: var(--logo-blue);
+    }
+}
+
+body.has-navbar-fixed-top, html.has-navbar-fixed-top {
+    padding-top: 0;    
+}
+
+
+
+
+
+
+.nombre {
+	color: darkorange;
+}
+
+
+
+
+
+
+
+
+
+a {
+    text-decoration: none;
+    font-weight : bold;
+    color: indianred;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: violet;
+}
+
+#page {
+    width: 85%;
+	margin: 0 auto;
+	padding: 10px;
+	border: 0;
+	background-color: rgba(0,0,0,0.5);
+}
+
+div {
+    color: #FDF1B8;
+    border: 2px solid;
+    padding: 5px;
+    margin: 10px;
+    visibility: scroll;
+}
+
+div.bo, div.accordion, div.accordion-item, div.accordion-header, div.accordion-collapse, div.accordion-body {
+	border: 0;
+}
+
+img.banniere {
+	background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+				linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+				linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+div.photolegende {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    float: right;
+}
+
+div.photolegende div {
+    color: orange;
+    border: 3px solid orange;
+    font-weight: bold;
+    padding : 5px;
+    margin: 5px;
+}
+
+div.photolegende img {
+    border: 3px solid black;
+    margin: 0;
+    padding: 0;
+}
+
+table tr td {
+    border: 2px solid;
+    padding: 3px;
+}
+
+h1 {
+    color: #BBD2E1;
+	margin-bottom: 50px;
+	font-family: Georgia, serif;
+}
+
+ul.presentation {
+    list-style-type: "\1F44D";
+    color: #BBD2E1;
+}
+
+ul li {
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.menu {
+	display: flex;  
+	justify-content: center  
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu ul{
+
+}
+
+.menu li{
+	list-style-type: none ; 
+}
+
+ul.menu > li {
+    float: left;
+    width: 260px;
+    display: block;
+	background-color: #6600FF;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: center;
+}
+
+ul.menu > li a {
+	color: orange;
+	text-decoration: none;
+    font-weight : bold;
+}
+
+ul.menu > li a:hover {
+    text-decoration: underline;
+    color: violet;
+}
+
+ul.menu > li:hover {
+	background-image: url("../images/star.jpg");
+}
+
+ul.menu li > ul {
+    display: none;
+    position: absolute;
+}
+
+ul.menu li:hover > ul {
+    display: block;
+    margin-top: 0px;
+    width: 260px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: center;
+	background-image: url("../images/star.jpg");
+}
+
+div.note {
+	 width: 15em;
+	 border: 1px solid #333;
+	 box-shadow: 8px 8px 5px #444;
+	 padding: 8px 12px;
+	 background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+	 float: right;
+	 color: #A76726;
+}
+
+div.cover {
+    border: 0;
+    padding: 5px;
+    margin: 10px;
+    visibility: scroll;
+}
+
+div.cover img {
+	width: 200px;
+	height: 200px;
+	margin: 31px;
+}
+
+div.cover div {
+	border: 0;
+	text-align: center;
+	display: inline;
+}
+
+img.anime {
+	float: right;
+	padding-right: 100px;
+	padding-left: 50px;
+}
+
+.zoom img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.zoom :hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.rotate img {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+ 
+.rotate :hover img {
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+
+.morph img {
+  width: 800px;
+  height: 600px;
+  -webkit-filter: grayscale(0) blur(0px);
+  filter: grayscale(0) blur(0px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+ 
+
+.morph img {
+  width: 800px;
+  height: 600px;
+  -webkit-filter: grayscale(0) blur(0px);
+  filter: grayscale(0) blur(0px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+ 
+.morph :hover img {
+  width: 300px; /* on affiche l'image au carré */
+  height: 300px;
+  border-radius: 50%;  /* on arrondit l'image */
+  -webkit-transform: rotate(360deg); /* rotation de l'image */
+  transform: rotate(360deg);
+}
+
+div.citation {
+	border: 0;
+	text-align: center;
+	margin: 50px;
+	color: limegreen;
+}
+
+footer div {
+	color: white;
+	background-color: rgba(0,0,0,0.5);
+	border: 0;
+	text-align: center;
+}
+
+table.disco {
+	color: #974537;
+	border-collapse: collapse;
+	margin-bottom: 50px;
+	margin-top: 50px;	
+}
+
+table.disco_detaillee td div.moyen,div.petit {
+	color: black;	
+}
+
+table.disco td {
+	background-color: #FFF5EE;	
+}
+
+table.disco_detaillee td {
+	border: 0;
+	width: 800px;
+	margin: 0px;
+}
+
+table.disco_detaillee td div.grand {
+	width: 100%; 
+	border: 0px;
+}
+
+table.disco_detaillee td div.petit {
+	background-color: #BBD2E1; 
+	font-size: 100%; 
+	font-weight: normal; 
+	border-bottom: dotted 1px #AAA; 
+	padding-right: 0em; 
+	text-align: left;
+	border-color: #d5a012;
+}
+
+table.disco_detaillee td div.moyen {
+	border: 0px; 
+	text-align: justify;
+	background: linear-gradient(#e66465, #9198e5);
+}
+
+p.retour {
+	padding: 15px;
+}
+
+form div {
+	border: 0px;
+}
+
+div.groupesliste {
+	border: 0px;
+}
+
+div.groupesliste td {
+	border: 0px;
+	background-color: black;
+}
+
+button.scroll_to_top {
+	position: fixed; 
+	width: 5%; 
+	height: 10%; 
+	bottom: 1%; 
+	right: 1%; 
+	border-radius: 50%;
+	font-size: 20%;
+	background-color: rgba(211, 211, 211, 0.774);
+} 
+
+button.scroll_to_top img {
+	width: 80%; 
+}

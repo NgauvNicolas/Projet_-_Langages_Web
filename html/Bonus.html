@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta name="author" content="N.Nicolas"/> 
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="../images/laruku_logo.png" type="image/x-icon"/>
+		<title>L'Arc~en~Ciel</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="../css/styles.css" />
+
+        <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  		<script src="../mon_fichier_Jquery.js"></script>
+  		<script>
+  			
+
+			$(document).ready(function() {
+				// la clé après avoir créé un compte 
+				var key = "7cfcf16f3e1a9c14cb4e20e8d67171b2" ; 
+	
+				// l'URL à interroger
+				var url = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=L'Arc~en~Ciel&api_key=" + key + "&format=json" ; 
+
+				$.getJSON(url, function(data) {
+					// Accède à la propriété "artist" (et pour éviter de devoir toujours écrire data avant artist)
+					var artist = data.artist;
+
+					// Récupère et affiche le nom de l'artiste
+					var laruku = $('#larukuLastFm');
+					laruku.append('<p><a href="' + artist.url + '">' + artist.name + '</a></p>');
+
+					// Récupère et affiche l'image medium de l'artiste
+					var megaImage = artist.image.find(image => image.size === "mega");
+					if (megaImage) {
+						$('#artistImage').html('<img src="' + megaImage["#text"] + '" alt="artist image"/>');
+					}
+
+					// Récupère et affiche le nombre d'auditeurs
+					$('#listenersCount').text(artist.stats.listeners);
+
+					// Récupère et affiche le nombre de fois qu'une chanson de L'Arc~en~Ciel a été jouée
+					$('#playCount').text(artist.stats.playcount);
+
+					// Récupère et affiche les tags
+					var tagsList = $('#tagsList');
+					artist.tags.tag.forEach(function(tag) {
+						tagsList.append('<li><a href="' + tag.url + '">' + tag.name + '</a></li>');
+					});
+
+					// Récupère et affiche la biographie
+					$('#bioSummary').html(artist.bio.summary);
+
+					// Récupère et affiche le contenu détaillé de la biographie
+					$('#bioContent').html(artist.bio.content);
+
+					// Récupère et affiche des artistes similaires (leur nom avec le lien guidant à leur page, ainsi qu'une image d'eux, et un saut de ligne pour aérer et séparer les artistes)
+					var similarArtistsList = $('#similarArtistsList');
+					artist.similar.artist.forEach(function(similarArtist) {
+						var simImage = similarArtist.image.find(image => image.size === "large");
+						similarArtistsList.append('<li><a href="' + similarArtist.url + '">' + similarArtist.name + '</a></li>');
+						similarArtistsList.append('<img src="' + simImage["#text"] +'" alt="similar artist"/>');
+						similarArtistsList.append('<br /><br />');
+					});
+				});
+			});
+
+
+  		</script>
+	</head>
+	<body>
+	    <img class="banniere" src="../images/laruku_logo.png" alt="L'Arc~en~Ciel" width="75%" />
+	    <nav class="navbar navbar-expand-lg" role="navigation" aria-label="main navigation">
+	        <div class="collapse navbar-collapse" id="navbarResponsive">
+	            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+	                <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+	                <li class="nav-item dropdown">
+	                	<a class="nav-link dropdown-toggle" href="Biographie1.html" id="navbarDropdownBiographie" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                        Biographie
+	                    </a>
+	                    <div class="dropdown-menu" aria-labelledby="navbarDropdownBiographie">
+	                    	<a class="dropdown-item" href="Biographie1.html">L'Arc~en~Ciel</a>
+	                        <a class="dropdown-item" href="TETSUYA.html">Tetsuya</a>
+	                        <a class="dropdown-item" href="HYDE.html">Hyde</a>
+	                        <a class="dropdown-item" href="Ken.html">Ken</a>
+	                        <a class="dropdown-item" href="Yukihiro.html">Yukihiro</a>
+	                    </div>
+	                </li>
+	                <li class="nav-item dropdown">
+	                	<a class="nav-link dropdown-toggle" href="discographie.html" id="navbarDropdownDiscographie" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                        Discographie
+	                    </a>
+	                    <div class="dropdown-menu" aria-labelledby="navbarDropdownDiscographie">
+	                    	<a class="dropdown-item" href="discographie.html">Générale</a>
+	                        <a class="dropdown-item" href="discographie_detaillee.html">Détaillée</a>
+	                    </div>
+	                </li>
+	                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="liste_paroles.html" id="navbarDropdownMusique" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                        Musique
+	                    </a>
+	                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMusique">
+	                    	<a class="dropdown-item" href="html/liste_paroles.html">Liste complète des chansons</a>
+	                        <a class="dropdown-item" href="paroles_anata.html">Anata (あなた)</a>
+	                        <a class="dropdown-item" href="paroles_blurry_eyes.html">Blurry Eyes</a>
+	                        <a class="dropdown-item" href="paroles_dearest_love.html">Dearest Love</a>
+	                        <a class="dropdown-item" href="paroles_hitomi_no_juunin.html">Hitomi no Juunin (瞳の住人)</a>
+	                        <a class="dropdown-item" href="paroles_jojoushi.html">Jojoushi (叙情詩)</a>
+	                        <a class="dropdown-item" href="paroles_my_heart_draws_a_dream.html">MY HEART DRAWS A DREAM</a>
+	                        <a class="dropdown-item" href="paroles_niji.html">Niji (虹)</a>                    
+	                    </div>
+	                </li>
+	                <li class="nav-item active"><a class="nav-link" href="Bonus.html">Bonus</a></li>
+	                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+	            </ul>
+	        </div>
+	    </nav>
+
+        <br />
+
+		<div id="page">
+			<button class="scroll_to_top"> 
+				<a href="#top"><img src="../images/top.png" alt="Retourner en haut" /></a> 
+			</button>
+			<h1 style="clear: both;">Bonus</h1>
+			<h2>Des informations récupérées à l'aide d'une connexion à une API (celle de Last.fm)</h2>
+			<h4><a href="http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=L%27Arc~en~Ciel&api_key=7cfcf16f3e1a9c14cb4e20e8d67171b2&format=json">LIEN pour voir la table de données (l'URL interrogée)</a></h4>
+
+			<br /><br /><br /><br />
+			<h3 class="vi">Nom et image de l'artiste sur Last.fm</h3>
+			<div class="bo" id="larukuLastFm"></div>
+			<div class="bo" id="artistImage"></div>
+			<br /><br />
+			<h3 class="vi">Une petite bio</h3>
+			<div class="bo">
+				<p id="bioSummary"> </p>
+			</div>
+			<h4 class="detailBi gras italique verte">Un peu plus de détails... (cliquez sur cette phrase pour les voir)</h4>
+			<div class="bo detailBio">
+				<p id="bioContent"> </p>
+			</div>
+			<br /><br />
+			<h4 class="vi">Liste des tags de L'Arc~en~Ciel sur Last.fm</h4>
+			<div class="bo" id="tagsList"></div>
+			<br /><br />
+			<h3 class="vi">Nombre de personnes qui écoutent L'Arc~en~Ciel sur Last.fm</h3>
+			<div class="bo">
+				<p class="nombre" id="listenersCount"> </p>
+			</div>
+			<br /><br />
+			<h3 class="vi">Nombre d'écoutes (chansons jouées) de L'Arc~en~Ciel sur Last.fm</h3>
+			<div class="bo">
+				<p class="nombre" id="playCount"> </p>
+			</div>
+			<br /><br />
+			<h3 class="vi">Petite liste d'artistes similaires sur Last.fm</h3>
+			<p>Pour les personnes qui découvrent un peu cet univers et qui voudraient en savoir plus~</p> 
+			<div class="bo" id="similarArtistsList"></div>
+			
+
+		    <br /><br /><br /><br />
+			<p class="retour">La discographie de L'Arc-en-Ciel ?<a href="discographie.html"> C'est par ici que ça se passe !</a> Ou alors,<a href="../index.html"> retour à l'accueil ?</a></p>
+		</div>
+
+		<footer>
+			<div><p>Ce site a été réalisé dans le cadre du cours de Langages Web durant le premier semestre de l'année universitaire 2023-2024.</p></div>
+		</footer>
+	</body>
+</html>

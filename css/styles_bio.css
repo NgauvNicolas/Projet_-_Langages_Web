@@ -1,0 +1,136 @@
+body {
+	background-image: url("../images/laruku_uchuu6.jpg");
+	background-attachment: fixed;
+    color: #FDF1B8;
+	text-align: justify;
+}
+
+#page {
+    width: 1200px;
+	margin: 0 auto;
+	padding: 10px;
+	border: 0;
+	background-color: rgba(0,0,0,0.5);
+}
+
+h1 {
+    color: #BBD2E1;
+	margin-bottom: 50px;
+	font-family: Georgia, serif;
+}
+
+img.banniere {
+	background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+				linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+				linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+ul li {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul.menu, ul.menu ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul.menu > li {
+    float: left;
+    width: 260px;
+    display: block;
+    background-color: #6600FF;
+    padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: center;
+}
+
+ul.menu > li a {
+	color: orange;
+	text-decoration: none;
+    font-weight : bold;
+}
+
+ul.menu > li a:hover {
+    text-decoration: underline;
+    color: violet;
+}
+
+ul.menu > li:hover {
+	background-image: url("../images/star.jpg");
+}
+
+
+ul.menu li > ul {
+    display: none;
+    position: absolute;
+}
+
+ul.menu li:hover > ul {
+    display: block;
+    margin-top: 0px;
+    width: 260px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: center;
+	background-image: url("../images/star.jpg");
+}
+
+h2 {
+	color: #BBD2E1;
+	font-family: Georgia, serif;
+}
+
+h4 {
+	color: #A76726;
+	font-family: Georgia, serif;
+}
+
+a {
+    text-decoration: none;
+    font-weight : bold;
+    color: green;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: violet;
+}
+
+span.italic {
+	font-style: italic;
+	text-decoration: underline;
+}
+
+footer div {
+	color: white;
+	background-color: rgba(0,0,0,0.5);
+	border: 0;
+	text-align: center;
+    padding: 5px;
+    margin: 10px;
+    visibility: scroll;
+}
+
+p.retour {
+	padding: 15px;
+}
+
+button.scroll_to_top {
+	position: fixed; 
+	width: 70px; 
+	height: 70px; 
+	bottom: 50px; 
+	right: 30px; 
+	border-radius: 50%;
+	font-size: 20px;
+	background-color: rgba(211, 211, 211, 0.774);
+} 
+
+button.scroll_to_top img {
+	width: 50px; 
+}

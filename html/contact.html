@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta name="author" content="N.Nicolas"/> 
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="../images/laruku_logo.png" type="image/x-icon"/>
+		<title>L'Arc~en~Ciel</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+        <link rel="stylesheet" href="../css/styles.css" />
+
+        <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+  		<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  		<script src="../jquery_pour_formulaire.js"></script>
+  		<script>
+		    $( function() {
+		      	var availableCountries = [
+		        	"France",
+		        	"Japon",
+		        	"Corée du Sud",
+		        	"États-Unis",
+		        	"Royaume-Uni"
+		      	];
+		      	$( "#pays" ).autocomplete({
+		        	source: availableCountries
+		      	});
+		    });
+		</script>
+		<script>
+		    $( function() {
+		      	var availableCyties = [
+		       		"Paris",
+		        	"Toulouse",
+		        	"Lyon",
+		        	"Montpellier",
+		        	"Tokyo",
+		        	"Osaka",
+		        	"Séoul",
+		        	"Jeju",
+		        	"New York",
+		        	"Miami"
+		        	"Londres",
+		        	"Manchester"
+		      	];
+		      	$( "#city" ).autocomplete({
+		        source: availableCyties
+		      	});
+		    });
+		</script>
+	</head>
+	<body>
+	    <img class="banniere" src="../images/laruku_logo.png" alt="L'Arc~en~Ciel" width="75%" />
+	    <nav class="navbar navbar-expand-lg" role="navigation" aria-label="main navigation">
+	        <div class="collapse navbar-collapse" id="navbarResponsive">
+	            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+	                <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+	                <li class="nav-item dropdown">
+	                	<a class="nav-link dropdown-toggle" href="Biographie1.html" id="navbarDropdownBiographie" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                        Biographie
+	                    </a>
+	                    <div class="dropdown-menu" aria-labelledby="navbarDropdownBiographie">
+	                    	<a class="dropdown-item" href="Biographie1.html">L'Arc~en~Ciel</a>
+	                        <a class="dropdown-item" href="TETSUYA.html">Tetsuya</a>
+	                        <a class="dropdown-item" href="HYDE.html">Hyde</a>
+	                        <a class="dropdown-item" href="Ken.html">Ken</a>
+	                        <a class="dropdown-item" href="Yukihiro.html">Yukihiro</a>
+	                    </div>
+	                </li>
+	                <li class="nav-item dropdown">
+	                	<a class="nav-link dropdown-toggle" href="discographie.html" id="navbarDropdownDiscographie" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                        Discographie
+	                    </a>
+	                    <div class="dropdown-menu" aria-labelledby="navbarDropdownDiscographie">
+	                    	<a class="dropdown-item" href="discographie.html">Générale</a>
+	                        <a class="dropdown-item" href="discographie_detaillee.html">Détaillée</a>
+	                    </div>
+	                </li>
+	                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="liste_paroles.html" id="navbarDropdownMusique" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                        Musique
+	                    </a>
+	                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMusique">
+	                    	<a class="dropdown-item" href="html/liste_paroles.html">Liste complète des chansons</a>
+	                        <a class="dropdown-item" href="paroles_anata.html">Anata (あなた)</a>
+	                        <a class="dropdown-item" href="paroles_blurry_eyes.html">Blurry Eyes</a>
+	                        <a class="dropdown-item" href="paroles_dearest_love.html">Dearest Love</a>
+	                        <a class="dropdown-item" href="paroles_hitomi_no_juunin.html">Hitomi no Juunin (瞳の住人)</a>
+	                        <a class="dropdown-item" href="paroles_jojoushi.html">Jojoushi (叙情詩)</a>
+	                        <a class="dropdown-item" href="paroles_my_heart_draws_a_dream.html">MY HEART DRAWS A DREAM</a>
+	                        <a class="dropdown-item" href="paroles_niji.html">Niji (虹)</a>                    
+	                    </div></li>
+	                <li class="nav-item"><a class="nav-link" href="Bonus.html">Bonus</a></li>
+	                <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
+	            </ul>
+	        </div>
+	    </nav>
+
+        <br />
+
+		<div id="page">
+			<button class="scroll_to_top"> 
+				<a href="#top"><img src="../images/top.png" alt="Retourner en haut" /></a> 
+			</button>
+			<h1 style="clear: both;">Me contacter</h1>
+			<img class="anime" src="../images/celty.gif" alt="" />
+			<p class="contact">Si vous rencontrez un problème sur le site, si vous avez des questions, ou si vous avez des suggestions concernant l'amélioration ou la mise à jour du site, vous pouvez me contacter à l'adresse mail suivante : <br />
+			<em>ngauv.nicolas@gmail.com</em></p>
+			<p>Ou bien alors directement via le formulaire ci-dessous :</p><br><br><br>
+
+
+		    <form class="container">
+		      <div class="form-floating mb-3">
+		      	<br /><br />
+		        <fieldset id="f1">
+		          <legend>Identité</legend>
+		          <label for="nom_utilisateur">NOM :</label>
+		          <input type="text" maxlength="20" id="nom_utilisateur" />
+
+		          <label for="prenom_utilisateur">Prénom :</label>
+		          <input type="text" maxlength="20" id="prenom_utilisateur" /><br />
+
+		          <label for="pseudo_utilisateur">Pseudo :</label>
+		          <input type="text" maxlength="20" id="pseudo_utilisateur" required />
+
+		          <label for="age_utilisateur">Age :</label>
+		          <input type="number" min="10" max="100" pattern="[0-9]{2}" id="age_utilisateur" />
+
+		          <p>Genre :
+		          <label for="fem">F</label>
+		          <input id="fem" type="radio" value="F" name="genre" />
+		          <label for="masc">M</label>
+		          <input id="masc" type="radio" value="M" name="genre" />
+		          <label for="neutre">N</label>
+		          <input id="neutre" type="radio" value="N" name="genre" />
+		          </p>
+		        </fieldset>
+		        <button id="b1" type="button">Suite</button>
+		      </div>
+		      <br>
+		      <div class="mb-3 ui-widget">
+		        <fieldset id="f2">
+		          <legend>Adresse</legend>
+		          <label for="adresse_pr">Adresse principale :</label>
+		          <input type="text" maxlength="40" id="adresse_pr" placeholder="ex : 7 Allée Simone Veil" />
+
+		          <label for="adresse_comp">Adresse complémentaire :</label>
+		          <input type="text" maxlength="80" id="adresse_comp" placeholder="ex : Bâtiment E, Appartement 404" />
+
+		          <br>
+
+		          <label for="code_p">Code postal :</label>
+		          <input type="text" maxlength="40" id="code_p" placeholder="ex : 93170" />
+
+		          <label for="city">Ville :</label>
+		          <input type="text" maxlength="40" id="city" placeholder="ex : Bagnolet" />
+
+		          <label for="pays">Pays :</label>
+		          <input type="text" maxlength="40" id="pays" placeholder="ex : France" />
+		          <br><br>
+		          <button id="b2" type="button">Retour</button>
+		          <button id="b3" type="button">Suite</button>  
+		        </fieldset>       
+		      </div>
+		      <br>
+		      <div class="mb-3">
+		        <fieldset id="f3">
+		          <legend>Contacts</legend>
+		          <label for="tel">Téléphone :</label>
+		          <input type="text" maxlength="10" id="tel" placeholder="ex : 0777394049" aria-describedby="telHelpBlock" />
+		          <div id="telHelpBlock" class="form-text">
+		            Veuillez fournir (si vous le voulez) votre numéro de téléphone sans séparateur entre les chiffres.
+		          </div>
+		          <label for="e-mail">E-mail :</label>
+		          <input type="email" maxlength="40" id="e-mail" placeholder="ex : bonjour.aurevoir@gmail.com" required />
+		          <br><br>
+		          <button id="b4" type="button">Retour</button>
+		          <button id="b5" type="button">Suite</button>
+		          </fieldset>  
+		      </div>
+		      <br>
+		      <div class="mb-3">
+		        <fieldset id="f4">
+		          <legend>Informations complémentaires</legend>
+		          <p>Statut :
+		          <label for="etu">Etudiant</label>
+		          <input id="etu" type="radio" value="Etudiant" name="infos" />
+		          <label for="salaryman">Salarié</label>
+		          <input id="salaryman" type="radio" value="Salarié" name="infos" />
+		          <label for="preneur">Auto-entrepreneur</label>
+		          <input id="preneur" type="radio" value="Auto-entrepreneur" name="infos" />
+		          <label for="recherche">En recherche d'emploi</label>
+		          <input id="recherche" type="radio" value="En recherche d'emploi" name="infos" />
+		          <label for="autre">Autre</label>
+		          <input id="autre" type="radio" value="Autre" name="infos" />
+		          <p>
+		          <label for="infos1">Comment avez-vous eu connaissance de ce site ?</label>
+		          <select id="menu">
+		            <option value="1">Recherches personnelles sur le sujet</option>
+		            <option value="2">Bouche-à-oreille</option>
+		            <option value="3">Par hasard</option>
+		            <option value="4">Autre</option>
+		          </select>
+		          <br><br>
+		          <button id="b6" type="button">Retour</button>
+		          <button id="b7" type="button">OK</button>
+		        </fieldset>  
+		      </div>
+		      <br />
+		      	<div class="mb-3" id="f6">
+		      		<legend>&#x1F338; &#x1F308; Je vous écoute~ &#x1F308; &#x1F338;</legend>
+		        	<textarea cols="80" rows="10" name="message" id="comment" placeholder="Un message ou un commentaire ?"></textarea>
+		      	</div>   
+		      <br />
+		      <br><br>
+		      <div class="mb-3 form-check" id="f5">
+		        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="check" required>
+		        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+		        <br><br>
+		        <input id="envoi" type="submit" value="Envoyer" />  
+		      </div>   
+		      <p id="thanks"> MERCI POUR VOTRE PARTICIPATION !! <br />
+		      <a href="contact.html">UNE AUTRE DEMANDE OU REMARQUE ? CLIQUEZ SUR CETTE PHRASE !</a></p>
+		    </form>
+		    <br /><br /><br /><br /><br />
+			<p class="retour"><a href="../index.html">Retour à l'accueil</a></p>
+		</div>
+		<footer>
+			<div><p>Ce site a été réalisé dans le cadre du cours de Langages Web durant le premier semestre de l'année universitaire 2023-2024.</p></div>
+		</footer>
+    </body>
+</html>
